@@ -1,3 +1,3 @@
-from .main import trigger_pattern, triggerable
+from .main import trigger_pattern, remove_trigger
 
-__all__ = ['trigger_pattern', 'triggerable']
+__all__ = ['trigger_pattern', 'remove_trigger']
