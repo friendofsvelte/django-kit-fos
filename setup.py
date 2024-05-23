@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="django-kit-fos",
-    version="0.0.1",
+    version="0.0.101",
     description="Python library to couple Svelte with Django. Use SvelteKit with Django, the easy way.",
     long_description=long_description,
     long_description_content_type="text/markdown",
