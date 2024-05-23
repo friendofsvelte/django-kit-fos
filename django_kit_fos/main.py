@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.urls import resolve, reverse, NoReverseMatch, path
 
 
-def remove_trigger(view_func):
+def prevent_trigger(view_func):
     """
     Wrap a view function to prevent it from being triggered via the trigger_pattern.
     :param view_func:
