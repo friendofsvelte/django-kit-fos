@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.urls import resolve, reverse, NoReverseMatch, path
+from django.views.decorators.csrf import csrf_exempt
 
 
 def prevent_trigger(view_func):
@@ -12,7 +13,9 @@ def prevent_trigger(view_func):
     return view_func
 
 
-def trigger_request_via_url_name(request, url_name: str):
+@csrf_exempt
+def trigger_request_via_url_name(request):
+    url_name = request.GET.get('url_name')
     try:
         view_func = resolve(reverse(url_name)).func
     except NoReverseMatch:
